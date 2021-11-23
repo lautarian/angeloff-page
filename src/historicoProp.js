@@ -16,7 +16,7 @@ export const historicoPropiedad = () =>{
     <nav class="navbar sticky-top navbar-light navbar-expand-lg"> 
       
                 
-            <Link class="navbar-brand ml-3 mt-2 " href="/Comercializar">
+            <Link class="navbar-brand ml-3 mt-2 " to="/Comercializar">
                 <img  src=".\img\LOGO3.png" width="200" alt="Logo Domus"  id="img-logo"/>
             </Link>
             <button class="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
@@ -27,10 +27,10 @@ export const historicoPropiedad = () =>{
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <div class="navbar-nav ml-auto align-items-center">
                    
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Reportes.html">Generar Reportes</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Mov.historicos.html">Archivo de Propiedades</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/App">Archivo de Propiedades</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="#">Archivo de Clientes</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Home">Cerrar Sesion</Link>
 
 
                     
@@ -49,7 +49,7 @@ export const historicoPropiedad = () =>{
 
         <div class="d-flex justify-content-end">
             <input type="text" class="mr-3" placeholder="Casa, barrio, ciudad"/>
-            <a href="#" class="btn btn-info">Buscar</a>
+            <Link to="#" class="btn btn-info">Buscar</Link>
         </div>
 
         <div class="row my-5">
@@ -119,16 +119,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style={{color: "#70C6DB"}} class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style={{color: "#70C6DB"}}>
                             <path
@@ -136,7 +136,7 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -164,16 +164,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen ">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style={{color: "#70C6DB"}} class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -181,15 +181,15 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center mb-3" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="img-fluid" src="images/6926f3bc39a48d542e1da880741a1862.jpg" alt="imagen-casa" width="50px"
-                    height="50px">
+                <img class="img-fluid" src="./img/6926f3bc39a48d542e1da880741a1862.jpg" alt="imagen-casa" width="50px"
+                    height="50px"/>
                 <h5>Chalet #34256</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -209,16 +209,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen ">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -226,14 +226,14 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center mb-3" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="img-fluid" src="images/apartma-3-balkon.jpg" alt="imagen-casa" width="50px" height="50px">
+                <img class="img-fluid" src="./img/apartma-3-balkon.jpg" alt="imagen-casa" width="50px" height="50px"/>
                 <h5>Departamento #35207</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -253,16 +253,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -270,15 +270,15 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center mb-3" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="img-fluid" src="images/pexels-photo-3958958.jpeg" alt="imagen-casa" width="50px"
-                    height="50px">
+                <img class="img-fluid" src="./img/pexels-photo-3958958.jpeg" alt="imagen-casa" width="50px"
+                    height="50px"/>
                 <h5>Casa c/Garage #35656</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -298,16 +298,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen ">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -315,14 +315,14 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center mb-3" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="img-fluid" src="images/ab.jpg" alt="imagen-casa" width="50px" height="50px">
+                <img class="img-fluid" src="./img/ab.jpg" alt="imagen-casa" width="50px" height="50px"/>
                 <h5>Monoambiente #36256</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -342,16 +342,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -359,15 +359,15 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center mb-3" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="" src="images/photo-1560347876-aeef00ee58a1.jpg" alt="imagen-casa" width="50px"
-                    height="50px">
+                <img class="" src="./img/photo-1560347876-aeef00ee58a1.jpg" alt="imagen-casa" width="50px"
+                    height="50px"/>
                 <h5>Depto. 6to Piso #33265</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -387,16 +387,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen ">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link class="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -404,14 +404,14 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
 
         <div class="row bg-white text-center" style="border-radius: 20px;">
             <div class="col-lg bordes pad">
-                <img class="img-fluid" src="images/3kSAXE.jpg" alt="imagen-casa" width="50px" height="50px">
+                <img class="img-fluid" src="./img/3kSAXE.jpg" alt="imagen-casa" width="50px" height="50px"/>
                 <h5>Casa s/ Garage #35699</h5>
             </div>
             <div class="col-lg bordes pad justify-content-center align-items-center d-flex">
@@ -431,16 +431,16 @@ export const historicoPropiedad = () =>{
             </div>
             <div class="col-lg justify-content-center align-items-center d-flex">
                 <div class="margen ">
-                    <a class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <Link to="btn" data-toggle="modal" data-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             style="color: #70C6DB;" class="bi bi-eye-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
                                 d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a href="" class="btn" data-toggle="modal" data-target="#reporte">
+                    <Link to="#" class="btn" data-toggle="modal" data-target="#reporte">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-file-earmark-text" viewBox="0 0 16 16" style="color: #70C6DB;">
                             <path
@@ -448,7 +448,7 @@ export const historicoPropiedad = () =>{
                             <path
                                 d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -456,24 +456,24 @@ export const historicoPropiedad = () =>{
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation">
                 <ul class="pagination mt-4">
-                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                    <li class="page-item"><Link class="page-link" to="#">Anterior</Link></li>
+                    <li class="page-item"><Link class="page-link" to="#">1</Link></li>
+                    <li class="page-item"><Link class="page-link" to="#">2</Link></li>
+                    <li class="page-item"><Link class="page-link" to="#">3</Link></li>
+                    <li class="page-item"><Link class="page-link" to="#">Siguiente</Link></li>
                 </ul>
             </nav>
         </div>
 
     </div>
 
-    <!-- Modal -->
+   
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="pop-up-informacion"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img class="imagen-prod" src="skins/house_example_3.png" alt="imagen-casa" style="margin: 0;">
+                    <img class="imagen-prod" src="./img/house_example_3.png" alt="imagen-casa" style="margin: 0;"/>
                     <h3 class="modal-title" id="pop-up-informacion" style="margin: 5% 0 0 2%;">Casa Residencial #35206
                     </h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -504,13 +504,13 @@ export const historicoPropiedad = () =>{
         </div>
     </div>
 
-    <!-- Modal -->
+    
     <div class="modal fade" id="reporte" tabindex="-1" role="dialog" aria-labelledby="pop-up-informacion"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img class="imagen-prod" src="skins/house_example_3.png" alt="imagen-casa" style="margin: 0;">
+                    <img class="imagen-prod" src="skins/house_example_3.png" alt="imagen-casa" style="margin: 0;"/>
                     <h3 class="modal-title" id="pop-up-informacion" style="margin: 5% 0 0 2%;">Casa Residencial #35206
                     </h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -552,7 +552,7 @@ export const historicoPropiedad = () =>{
             </div>
         </div>
     </div>
-
+    {{/*
     <!-- Script para que muestre los numeros en el listado de precios-->
     <script>
         addEventListener('load', inicio, false);
@@ -565,6 +565,7 @@ export const historicoPropiedad = () =>{
             document.getElementById('pre').innerHTML = document.getElementById('precio').value;
         }
     </script>
+    */}}
         </div>
     );
 

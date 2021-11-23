@@ -28,10 +28,10 @@ export const Reportes = () =>{
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <div class="navbar-nav ml-auto align-items-center">
                    
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Reportes.html">Generar Reportes</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Mov.historicos.html">Archivo de Propiedades</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                    <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/App">Archivo de Propiedades</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="#">Archivo de Clientes</Link>
+                    <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Home">Cerrar Sesion</Link>
 
 
                     
@@ -79,9 +79,9 @@ export const Reportes = () =>{
                                 <input type="date" id="fecha" name="reporte-fecha" value="2021-05-19" class="form-control" required/>
                             </div>
                             <div class="col-md py-4 px-1 border-start border-end border-secondary hide-border reportes">
-                                <a href="ReportesVista.html" class="btn w-100 btn-info">
+                                <Link to="#" class="btn w-100 btn-info">
                                     Generar
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -114,9 +114,9 @@ export const Reportes = () =>{
                                 <input type="date" id="fecha" name="reporte-fecha" value="2021-05-19" class="form-control" required/>
                             </div>
                             <div class="col-md py-4 px-1 border-start border-end border-secondary hide-border reportes">
-                                <a href="ReportesVista.html" class="btn w-100 btn-info">
+                                <Link to="#" class="btn w-100 btn-info">
                                     Generar
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -149,9 +149,9 @@ export const Reportes = () =>{
                                 <input type="date" id="fecha" name="reporte-fecha" value="2021-05-19" class="form-control" required/>
                             </div>
                             <div class="col-md py-4 px-1 border-start border-end border-secondary hide-border reportes">
-                                <a href="ReportesVista.html" class="btn w-100 btn-info">
+                                <Link to="#" class="btn w-100 btn-info">
                                     Generar
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -185,9 +185,9 @@ export const Reportes = () =>{
                                 <input type="date" id="fecha" name="reporte-fecha" value="2021-05-01" class="form-control" required/>
                             </div>
                             <div class="col-md py-4 px-1 border-start border-end border-secondary hide-border reportes">
-                                <a href="ReportesVista.html" class="btn w-100 btn-info">
+                                <Link to="#" class="btn w-100 btn-info">
                                     Generar
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
