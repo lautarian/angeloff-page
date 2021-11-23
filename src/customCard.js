@@ -21,7 +21,7 @@ export default function CustomCard({ propiedad,visibilizar }) {
         justifyContent="center"
         style={{ width: "20%" }}
       >
-
+        
         <img class="img-fluid" src={propiedad.imagen} width="50px" height="50px"/>
 
         {" "}
