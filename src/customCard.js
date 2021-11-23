@@ -1,6 +1,7 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, IconButton, Typography } from "@mui/material";
+import Visibility from "@material-ui/icons/Visibility";
 
-export default function CustomCard({ propiedad }) {
+export default function CustomCard({ propiedad,visibilizar }) {
   return (
     <Grid
       container
@@ -39,7 +40,7 @@ export default function CustomCard({ propiedad }) {
         justifyContent="center"
         style={{ width: "20%" }}
       >
-        <Typography>{propiedad.disponibilidad}</Typography>
+        <Typography>{propiedad.telefono}</Typography>
       </Grid>
       <Grid
         container
@@ -57,7 +58,7 @@ export default function CustomCard({ propiedad }) {
         justifyContent="center"
         style={{ width: "20%" }}
       >
-        <Typography>{propiedad.telefono}</Typography>
+          <IconButton onClick={()=> visibilizar(propiedad) }> <Visibility style={{color:"#70C6DB"}} /> </IconButton>
       </Grid>
 
       {/* <Grid container item>

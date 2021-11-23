@@ -6,6 +6,7 @@ import {
   Grid,
   InputLabel,
   MenuItem,
+  Modal,
   Select,
   TextField,
   Typography,
@@ -13,18 +14,33 @@ import {
 import React , { useEffect, useState, Component } from "react";
 import CustomCard from "./customCard";
 import axios from "axios";
+import Detalles from "./modalDetalles";
 
 
 function App() {
+    
   const [propiedades, setPropiedades] = useState([]);
   const [Tablapropiedades, setTablaPropiedades] = useState([]);
   const [busqueda, setBusqueda] = useState([]);
-
-
+  const [modalOpen, setModalOpen] = useState(false);
+  
+  
+  
+  
   const [tipoSeleccionado, setTipoSeleccionado] = useState(0);
   const [ubicacionSeleccionada, setUbicacionSeleccionada] = useState(0);
   const [precioSeleccionado, setPrecioSeleccionado] = useState(0);
   const [estadoSeleccionado, setEstadoSeleccionado] = useState(0);
+  const [propiedadSeleccionada, setPropiedadSeleccionado] = useState();
+
+  const onCloseModal = ()=>{
+    setModalOpen(false);
+  }  
+  const visualizarInfo = (unaPropiedad)=>{
+    setPropiedadSeleccionado(unaPropiedad)
+    setModalOpen(true);
+    console.log("lo que se me cante", unaPropiedad);
+    };
 
   const handleChangeTipo = (e) => {
     setTipoSeleccionado(e);
@@ -364,7 +380,7 @@ function App() {
             {propiedades?.length > 0 ? (
             propiedades.map((propiedad) => (
                 <>
-                <CustomCard propiedad={propiedad} />
+                <CustomCard propiedad={propiedad} visibilizar={visualizarInfo}/>
                 </>
             ))
             ) : (
@@ -571,7 +587,16 @@ function App() {
            
     </body>
      
+    <Modal
+        open={modalOpen}
+        onClose={onCloseModal}
     
+    
+    >
+
+
+        <Detalles propiedad={propiedadSeleccionada && propiedadSeleccionada} />
+    </Modal>
     
     </div>);
 }
