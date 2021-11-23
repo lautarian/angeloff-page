@@ -1,0 +1,160 @@
+body{
+    background: url(../../../images/Howdorealestateagentsgetpaid-571bd00c3df78c564045853d.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family:'DM Sans', sans-serif
+}
+
+.navbar{
+   
+   background-color: #70c6db;
+}
+
+.navbar-nav a{
+    font-size: 1vw;
+}
+
+@media (max-width: 1177px) {
+    .navbar-nav a {
+        font-size: 1rem;
+    }
+}
+
+
+#cat_prop{
+    color: rgb(255, 255, 255);
+}
+
+#sub_prop{
+    margin-left: 6%;
+    margin-top: 3%;
+    color: rgb(255, 255, 255);
+}
+
+.titulos{
+    margin-top: 7%;
+    margin-left: 10%;
+}
+hr.solid {
+    margin-right: 67%;
+    border-top: 10px solid rgb(255, 255, 255);
+  }
+
+
+    
+
+h5{
+    color: black;
+}
+.card{
+    border-radius: 8%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+.card-img-top{
+    border-radius: 8%;
+    width: 256px;
+    height: 202.67px;
+}
+.card{
+    padding: 1rem!important;
+    border: none;
+    margin-bottom:1rem;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    }
+    .card:hover{
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+    .card .card-block{
+    padding-left: 50px;
+    position: relative;
+    }
+    .card .card-block a{
+    color: #21967bde !important;
+    font-weight:700;
+    text-decoration:none;
+    }
+    .card .card-block a i{
+    display:none;
+
+    }
+    .card:hover .card-block a i{
+    display:inline-block;
+    font-weight:700;
+
+    }
+    .card .card-block:before{
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 39px;
+    color: #46c7a9e3;
+    left: 0;
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition:transform .2s ease-in-out;
+    }
+    .card .block-1:before{
+        content: "\f0f0";
+    }
+    .card .block-2:before{
+        content: "\f0f1";
+    }
+    .card .block-3:before{
+        content: "\f0f0";
+    }
+    .card .block-4:before{
+        content: "\f0f1";
+    }
+
+    .card:hover .card-block:before{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: .5s all ease;
+        -moz-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+
+
+
+    footer{
+        background-color: #70c6db;
+        margin-top: 5rem;
+        border-color:#123b4600 ;
+        font-family:'DM Sans', sans-serif
+    
+    }
+    
+    .footer-total{
+        background-color: black;
+    }
+    
+    
+    .foot-top{
+        border: 0px;
+        top: 0px;
+        height: 0.6rem;
+        background: linear-gradient(to right, #123b46, #51bcd6);
+        border-color:#123b4600 ;
+    
+    }
+    .container-anexo{
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: #676767ad;
+    
+    }
+    
+    .text-break-all{
+        word-break: break-all;
+    }
+    
+    .btn-outline-info{
+        color: white;
+        border-color: white;
+        border-width: 0.2rem;
+    }

@@ -1,0 +1,107 @@
+body{
+    background: url(../../../images/principal.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    font-family:'DM Sans', sans-serif
+}
+
+.navbar{
+   
+   background-color: #70c6db;
+}
+
+.navbar-nav a{
+    font-size: 1vw;
+}
+
+@media (max-width: 1177px) {
+    .navbar-nav a {
+        font-size: 1rem;
+    }
+}
+
+    
+h5{
+    color: black;
+}
+
+.cama1{
+    margin-left: 45%;
+}
+
+#descripcion{
+    font-size: medium;
+    margin-right: 3%;
+}
+
+#caracteristicas{
+    margin-left: 4%;
+}
+
+.carac_adentro{
+    margin-left: 10%;
+}
+
+#letra_top_blanca{
+    color: white;
+}
+
+#letra_top_derecha{
+    color: white;
+    text-align-last:right
+}
+
+.direccion{
+    margin-left:1%
+}
+
+#container1{
+    background: white;
+    text-decoration-color: cornsilk;
+    border-radius: 30px;
+}
+
+footer{
+    background-color: #70c6db;
+    margin-top: 5rem;
+    border-color:#123b4600 ;
+    font-family:'DM Sans', sans-serif
+
+}
+
+.footer-total{
+    background-color: black;
+}
+
+
+.foot-top{
+    border: 0px;
+    top: 0px;
+    height: 0.6rem;
+    background: linear-gradient(to right, #123b46, #51bcd6);
+    border-color:#123b4600 ;
+
+
+}
+
+.text-break-all{
+    word-break: break-all;
+}
+
+
+.info-prop{
+    background: white;
+    border-radius: 8%;
+    border-color: #70c6db;
+}
+
+.info-prop .info hr{
+    background:lightgray;
+    
+}
+
+
+.btn-outline-info{
+    color: white;
+    border-color: white;
+    border-width: 0.2rem;
+}
