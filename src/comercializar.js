@@ -29,9 +29,9 @@ export const Comercializar = () =>{
                     <div className="navbar-nav ml-auto align-items-center">
                         
                         <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="/App">Archivo de Propiedades</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/App">Archivo de Propiedades</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="#">Archivo de Clientes</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Home">Cerrar Sesion</Link>
 
 
                         
@@ -71,13 +71,13 @@ export const Comercializar = () =>{
                     </Link>
                 </div>
                 <div className="card col-lg-3 col-sm-6 mr-4 ml-4 cardsita" style={{width: "18rem"}}>
-                    <a href="Consultar-cliente.html" className="clase_a">
+                    <Link to="#" className="clase_a">
                         <img src="./img/archivocliente.jpg" className="card-img-top " alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">CONSULTAR ARCHIVO CLIENTES</h5>
                             <p className="card-text">Consultar el archivo de los distintas clientes.</p>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
             </div>

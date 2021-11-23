@@ -16,9 +16,9 @@ export const ReservarCita = () =>{
             <nav class="navbar sticky-top navbar-light navbar-expand-lg"> 
          
                     
-                <a class="navbar-brand ml-3 mt-2 " href="index.html">
+                <Link class="navbar-brand ml-3 mt-2 " to="/Home">
                     <img  src=".\img\LOGO3.png" width="200" alt="Logo Domus"  id="img-logo"/>
-                </a>
+                </Link>
                 <button class="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" 
                     aria-label="Toggle navigation">

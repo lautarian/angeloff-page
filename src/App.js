@@ -1,4 +1,11 @@
 import "./App.css";
+import {BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+    Link,
+    Oulet
+   } from 'react-router-dom'
 import {
   Button,
   Container,
@@ -210,9 +217,9 @@ export const App=()=> {
     <body>
         <nav className="navbar sticky-top navbar-light navbar-expand-lg"> 
                     
-                <a className="navbar-brand ml-3 mt-2 " href="">
+                <Link className="navbar-brand ml-3 mt-2 " href="/Comercializar">
                     <img  src={"./img/LOGO3.png"} width="200" alt="Logo Domus"  id="img-logo"/>
-                </a>
+                </Link>
                 <button className="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" 
                     aria-label="Toggle navigation">
@@ -220,10 +227,10 @@ export const App=()=> {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <div className="navbar-nav ml-auto align-items-center">
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Reportes.html">Generar Reportes</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Mov.historicos.html">Archivo de Propiedades</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/App">Archivo de Propiedades</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="#">Archivo de Clientes</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Home">Cerrar Sesion</Link>
     
     
                         
