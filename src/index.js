@@ -1,9 +1,7 @@
-import "./App.css";
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './css/Catalogo_clientes.css';
 import reportWebVitals from './reportWebVitals';
 import { Home } from './Home';
 import { PropiedadesCatalogo } from './propiedadesCat';
@@ -13,7 +11,9 @@ import { Conocenos } from "./conocenos";
 import { Nosotros } from "./nosotros";
 import { Comercializar } from "./comercializar";
 import { Reportes } from "./reportes";
-
+import { App } from "./App";
+/* import 'bootstrap/dist/css/bootstrap.min.css';
+ */
 
 import {BrowserRouter as Router,
    Routes,
@@ -35,6 +35,8 @@ ReactDOM.render(
       <Route path="/Nosotros" element={<Nosotros />}/>
       <Route path="/Comercializar" element={<Comercializar />}/>
       <Route path="/Reportes" element={<Reportes />}/>
+      <Route path="/App" element={<App />}/>
+
     </Routes>
   </Router>,
   document.getElementById('root')

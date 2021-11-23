@@ -123,3 +123,7 @@ footer{
     word-break: break-all;
 }
 
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background: #70c6db;
+}

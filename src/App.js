@@ -17,7 +17,7 @@ import axios from "axios";
 import Detalles from "./modalDetalles";
 
 
-function App() {
+export const App=()=> {
     
   const [propiedades, setPropiedades] = useState([]);
   const [Tablapropiedades, setTablaPropiedades] = useState([]);
@@ -62,8 +62,8 @@ function App() {
 
   const handleChangeEstado = (e) => {
     setEstadoSeleccionado(e);
-/*     filtroSelect(tipoSeleccionado,ubicacionSeleccionada,precioSeleccionado,e);
- */
+    filtroSelect(tipoSeleccionado,ubicacionSeleccionada,precioSeleccionado,e);
+
   };
 
   const handleChangeBusqueda = (e) => {
@@ -73,7 +73,7 @@ function App() {
 
   const filtrar =(terminoBusqueda) =>{
       var ResultadoBusqueda=Tablapropiedades.filter((elemento)=>{
-          if(elemento.id.toString().includes(terminoBusqueda)){
+          if(elemento.cod_propiedad.toString().includes(terminoBusqueda)){
               return elemento;
           }
       });
@@ -91,7 +91,7 @@ function App() {
     if (terminoTipo!=0){
 
         var Resultado=Tablapropiedades.filter((elemento)=>{
-            if((elemento.gender.toString().includes(terminoTipo))){
+            if((elemento.tipo_prop.toString().includes(terminoTipo))){
                 return elemento;
             }
           });
@@ -101,7 +101,7 @@ function App() {
     if (terminoUbi!=0){
 
         var Resultado=Resultado.filter((elemento)=>{
-            if((elemento.species.toString().includes(terminoUbi))){
+            if((elemento.ubicacion.toString().includes(terminoUbi))){
                 return elemento;
             }
           });
@@ -110,7 +110,7 @@ function App() {
     if (terminoPrecio!=0){
 
         var Resultado=Resultado.filter((elemento)=>{
-            if((elemento.type.toString().includes(terminoPrecio))){
+            if((elemento.precio.toString().includes(terminoPrecio))){
                 return elemento;
             }
           });
@@ -119,7 +119,7 @@ function App() {
     if (terminoEstado!=0){
 
         var Resultado=Resultado.filter((elemento)=>{
-            if((elemento.gender.toString().includes(terminoEstado))){
+            if((elemento.tipo.toString().includes(terminoEstado))){
                 return elemento;
             }
           });
@@ -289,8 +289,8 @@ function App() {
                 onChange={(e) => handleChangeTipo(e.target.value)}
                 >
                 <MenuItem value={0}>-TIPO DE PROPIEDAD-</MenuItem>
-                <MenuItem value={'Female'}>Female</MenuItem>
-                <MenuItem value={'Male'}>Male</MenuItem>
+                <MenuItem value={'Casa'}>Casa</MenuItem>
+                <MenuItem value={'Chalet'}>Chalet</MenuItem>
                 <MenuItem value={'Departamento'}>Departamento</MenuItem>
                 <MenuItem value={'Monoambiente'}>Monoambiente</MenuItem>
                 </Select>
@@ -313,10 +313,14 @@ function App() {
                 onChange={(e) => handleChangeUbicacion(e.target.value)}
                 >
                 <MenuItem value={0}>-UBICACION-</MenuItem>
-                <MenuItem value={'Alien'}>Alien</MenuItem>
-                <MenuItem value={'Human'}>Human</MenuItem>
-                <MenuItem value={'Humanoid'}>Humanoid</MenuItem>
-                <MenuItem value={'Monoambiente'}>Monoambiente</MenuItem>
+                <MenuItem value={'Chaco'}>Chaco</MenuItem>
+                <MenuItem value={'Corrientes'}>Corrientes</MenuItem>
+                <MenuItem value={'Mendoza'}>Mendoza</MenuItem>
+                <MenuItem value={'San Luis'}>San Luis</MenuItem>
+                <MenuItem value={'Misiones'}>Misiones</MenuItem>
+                <MenuItem value={'Formosa'}>Formosa</MenuItem>
+
+
                 </Select>
             </FormControl>
                 
@@ -334,8 +338,8 @@ function App() {
                 onChange={(e) => handleChangePrecio(e.target.value)}
                 >
                 <MenuItem value={0}>-PRECIO-</MenuItem>
-                <MenuItem value={'Dog'}>Dog </MenuItem>
-                <MenuItem value={'Giant'}>Giant</MenuItem>
+                <MenuItem value={1}>0 - 1.000.000 ARS </MenuItem>
+                <MenuItem value={2}>1.000.001 - 2.000.000 ARS</MenuItem>
                 <MenuItem value={3}>2.000.001 - 4.000.000 ARS</MenuItem>
                 <MenuItem value={4}>4.000.001 - 9.000.000 ARS</MenuItem>
                 </Select>
@@ -355,10 +359,8 @@ function App() {
                 onChange={(e) => handleChangeEstado(e.target.value)}
                 >
                 <MenuItem value={0}>-ESTADO-</MenuItem>
-                <MenuItem value={1}>Nueva-Alquiler</MenuItem>
-                <MenuItem value={2}>Nueva-Venta</MenuItem>
-                <MenuItem value={3}>Remodelada-Alquiler</MenuItem>
-                <MenuItem value={4}>Remodelada-Venta</MenuItem>
+                <MenuItem value={'Alquiler'}>Alquiler</MenuItem>
+                <MenuItem value={'Venta'}>Venta</MenuItem>
                 </Select>
             </FormControl>
             </Grid>
@@ -392,194 +394,11 @@ function App() {
 
 
 
-
-
-
-
-
-        {/*ACA EMPIEZA EL FOOTERSS  */}
-
-
-
-
-    
-        
-    
         </div>
-    
-       
-        <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="pop-up-informacion"
-            aria-hidden="true">
-            <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <img className="imagen-prod" src="./img/house_example_3.png" alt="imagen-casa" />
-                        <h3 className="modal-title" id="pop-up-informacion" >Casa Residencial #35206
-                        </h3>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <p>Av. Italia 905</p>
-                        <p>Piso: -</p>
-                        <p>Barrio: A.Mu.Doch</p>
-                        <p>Resistencia</p>
-                        <p>Chaco</p>
-                        <div className="d-flex justify-content-end" >
-                            <button className="btn btn-success " data-dismiss="modal">DISPONIBLE</button>
-                        </div>
-                    </div>
-                    <div className="modal-body" >
-                        <h4>Informacion Locatario Actual</h4>
-                        <p>Nombre Cliente: Oscar</p>
-                        <p>Apellido Cliente: Fernandez -</p>
-                        <p>Tipo de Cliente: Propietario</p>
-                        <p>Fecha de Inicio: 01/10/2019</p>
-                        <p>Fecha de Finalizacion: --</p>
-                        <p>Costo de Venta: $4.450.000,00</p>
-                        <p>Tipo: VENTA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div className="modal fade" id="reporte" tabindex="-1" role="dialog" aria-labelledby="pop-up-informacion"
-            aria-hidden="true">
-            <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <img className="imagen-prod" src="./img/house_example_3.png" alt="imagen-casa" />
-                        <h3 className="modal-title" id="pop-up-informacion" >Casa Residencial #35206
-                        </h3>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <p>Av. Italia 905</p>
-                        <p>Piso: -</p>
-                        <p>Barrio: A.Mu.Doch</p>
-                        <p>Resistencia</p>
-                        <p>Chaco</p>
-                        <div className="d-flex justify-content-end" >
-                            <button className="btn btn-success " data-dismiss="modal">DISPONIBLE</button>
-                        </div>
-                    </div>
-                    <div className="modal-body" >
-                        <h4>Informacion de Locatario</h4>
-                        <p>Nombre Cliente: Matias</p>
-                        <p>Apellido Cliente: Sanchez -</p>
-                        <p>Tipo de Cliente: Propietario</p>
-                        <p>Fecha de Inicio: 15/01/2018</p>
-                        <p>Fecha de Finalizacion: 20/09/2019</p>
-                        <p>Costo de Venta: $45.000,00</p>
-                        <p>Tipo: ALQUILER</p>
-                    </div>
-    
-                    <div className="modal-body" >
-                        <p>Nombre Cliente: Julian</p>
-                        <p>Apellido Cliente: García -</p>
-                        <p>Tipo de Cliente: Propietario</p>
-                        <p>Fecha de Inicio: 01/15/2018</p>
-                        <p>Fecha de Finalizacion: 09/01/2018</p>
-                        <p>Costo de Venta: $30.000,00</p>
-                        <p>Tipo: ALQUILER</p>
-                    </div>
-    
-    
-                </div>
-            </div>
-        </div>
-     
-
-    <Grid xl='12' lg='12' md='12' sm='12' xs='12'>
-        <footer className="   border-top">
-            <div className="container-fluid">
-                <div className="row foot-top"></div>
-            </div>
-            <div className="container-fluid">
-
-                <div className="row mt-3 ">
-                    <div className="col-12 col-md text-center">
-                        <img className="ml-3 mb-2 img-fluid" src="images/logo3_2.png" alt="" width="300"/>
-                        <br/>
-
-                        <div className="col-10  ml-auto mr-auto">
-                            <p className=" mb-3 text-white font-italic font-weight-bold text-md"> Nos comprometemos a
-                                materializar el hogar de sus sueños</p>
-
-                        </div>
-
-                        <div>
-                            <i className="fab fa-cc-paypal fa-3x mr-3 ml-3"></i>
-                            <i className="fab fa-cc-visa fa-3x mr-3 ml-3"></i>
-                            <i className="fab fa-cc-mastercard fa-3x mr-3 ml-3"></i>
-                        </div>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>Sobre Nosotros</h5>
-                        <ul className="list-unstyled text-small">
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white" href="#">Métodos
-                                    de
-                                    Pago</a></li>
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white" href="#">Términos
-                                    y
-                                    Condiciones</a></li>
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white"
-                                    href="NuestroTeam.html">Nuestro Equipo</a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>Contacto</h5>
-                        <ul className="list-unstyled text-small">
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white"
-                                    href="#">Contactanos
-                                    Via Web</a></li>
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white" href="#">TEL:
-                                    3624-665582</a></li>
-                            <li className="mb-3">EMAIL:<a
-                                    className="link-secondary text-decoration-none text-white text-break-all"
-                                    href="mailto:info@inmobiliariadomus.com">info@inmobiliariadomus.com </a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>Nuestra Direccion</h5>
-                        <ul className="list-unstyled text-small">
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white" href="#">French
-                                    450</a></li>
-                            <li className="mb-3"><a className="link-secondary text-decoration-none text-white"
-                                    href="#">Resistencia,
-                                    Chaco - Argentina</a></li>
-                            <li className="mb-3 "> <i className="fab fa-facebook fa-3x  mr-3  "></i>
-
-                                <i className="fab fa-instagram fa-3x mr-3 ml-1"></i>
-
-                                <i className="fab fa-twitter-square fa-3x mr-3 ml-1"></i>
-
-                                <i className="fab fa-youtube-square fa-3x mr-3 ml-1"></i>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="container-fluid">
-                <div className="row footer-total mt-3">
-                    <div className="col-md-12 text-center linea1 mt-3 mb-3">
-                        <div className="copyright">
-                            <p className="text-light ">© <span>2021</span> <a href="#" className="transition text-white ">Domus
-                                    Inc.
-                                    - Grupo 3 </a>- All rights reserved .-</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </footer>
 
 
-    </Grid>
+
+
 
 
     

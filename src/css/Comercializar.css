@@ -52,13 +52,25 @@ h5{
 }
 .card{
     border-radius: 8%;
-    display: inline-block;
+    display:flex;
     margin-left: 3%;
     margin-right: 1.5%;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
     
 }
+
+.cardsita{
+    border-radius: 8%;
+    display:flex;
+    margin-left: 3%;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    background-color: #ffffffd8;
+    
+}
+
 .card-img-top{
     border-radius: 8%;
     width: 256px;
@@ -72,6 +84,12 @@ h5{
     -moz-transition: .5s all ease;
     transition: .5s all ease;
     }
+
+    .cartas.text-center {
+        display: flex;
+        justify-content: center;
+    }
+
     .card:hover{
     -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);

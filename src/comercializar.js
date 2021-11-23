@@ -1,4 +1,5 @@
-import "./css/Comercializar.css"
+import "./css/index.css";
+
 
 import {BrowserRouter as Router,
     Routes,
@@ -13,24 +14,24 @@ export const Comercializar = () =>{
     return(
         <div>
 
-            <nav class="navbar sticky-top navbar-light navbar-expand-lg"> 
+            <nav className="navbar sticky-top navbar-light navbar-expand-lg"> 
             
                         
-                <Link class="navbar-brand ml-3 mt-2 " to="/Comercializar">
+                <Link className="navbar-brand ml-3 mt-2 " to="/Comercializar">
                     <img  src=".\img\LOGO3.png" width="200" alt="Logo Domus"  id="img-logo"/>
                 </Link>
-                <button class="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
+                <button className="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" 
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <div class="navbar-nav ml-auto align-items-center">
+                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div className="navbar-nav ml-auto align-items-center">
                         
-                        <Link class="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
-                        <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Mov.historicos.html">Archivo de Propiedades</a>
-                        <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                        <a class="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
+                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="/App">Archivo de Propiedades</a>
+                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
+                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
 
 
                         
@@ -38,41 +39,43 @@ export const Comercializar = () =>{
                 </div>
     
             </nav>
-            <div class="titulos">
-                <h1 id="cat_prop"><b>Portal Comercialización</b></h1><hr class="solid"/>
-                <h2 id="sub_prop">Operaciones Disponibles</h2>
+            <div className="titulos">
+                <h1 className=" text-white" id="cat_prop" style={{fontSize:"2.5rem"}} ><b>Portal Comercialización</b></h1>
+
+                <hr className="solid"/>
+                <h2 className=" text-white" id="sub_prop">Operaciones Disponibles</h2>
             </div>
 
 
 
 
-            <div class="cartas text-center">
+            <div className="cartas text-center">
             
-                <div class="card col-lg-3 col-sm-6 mr-4 ml-4" style={{width: "18rem", color: "white"}}>
-                    <Link to="/Reportes" class="clase_a">
-                        <img src="./img/reportes.jpg" class="card-img-top " alt="..."/>
-                        <div class="card-body">
-                            <h5 class="card-title">GENERAR REPORTES </h5>
-                            <p class="card-text">Generar reportes de ventas, alquileres, clientes, propiedades.</p>
+                <div className="card col-lg-3 col-sm-6 mr-4 ml-4 cardsita" style={{width: "18rem", color: "white"}}>
+                    <Link to="/Reportes" className="clase_a">
+                        <img src="./img/reportes.jpg" className="card-img-top " alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">GENERAR REPORTES </h5>
+                            <p className="card-text">Generar reportes de ventas, alquileres, clientes, propiedades.</p>
                         </div>
                     </Link>
                 </div>
 
-                <div class="card col-lg-3 col-sm-6 mr-4 ml-4" style={{width: "18rem"}}>
-                    <a href="Mov.historicos.html" class="clase_a">
-                        <img src="./img/catalogo.jpg" class="card-img-top " alt="..."/>
-                        <div class="card-body">
-                            <h5 class="card-title">CONSULTAR ARCHIVO DE PROPIEDADES</h5>
-                            <p class="card-text">Consultar el historico de las distintas propiedades.</p>
+                <div className="card col-lg-3 col-sm-6 mr-4 ml-4 cardsita" style={{width: "18rem"}}>
+                    <Link to="/App" className="clase_a">
+                        <img src="./img/catalogo.jpg" className="card-img-top " alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">CONSULTAR ARCHIVO DE PROPIEDADES</h5>
+                            <p className="card-text">Consultar el historico de las distintas propiedades.</p>
                         </div>
-                    </a>
+                    </Link>
                 </div>
-                <div class="card col-lg-3 col-sm-6 mr-4 ml-4" style={{width: "18rem"}}>
-                    <a href="Consultar-cliente.html" class="clase_a">
-                        <img src="./img/archivocliente.jpg" class="card-img-top " alt="..."/>
-                        <div class="card-body">
-                            <h5 class="card-title">CONSULTAR ARCHIVO CLIENTES</h5>
-                            <p class="card-text">Consultar el archivo de los distintas clientes.</p>
+                <div className="card col-lg-3 col-sm-6 mr-4 ml-4 cardsita" style={{width: "18rem"}}>
+                    <a href="Consultar-cliente.html" className="clase_a">
+                        <img src="./img/archivocliente.jpg" className="card-img-top " alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">CONSULTAR ARCHIVO CLIENTES</h5>
+                            <p className="card-text">Consultar el archivo de los distintas clientes.</p>
                         </div>
                     </a>
                 </div>

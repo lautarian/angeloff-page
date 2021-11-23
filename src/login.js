@@ -43,7 +43,7 @@ export const Login = () =>{
         <div class="col-sm-12 main-section">
             <div class=" modal-content">
                 <div class="col-12 user-img">
-                    <img class="logous" src=".\img\Portrait_Placeholder.png" alt="EL BETI"/>
+                    <img class="logous" src=".\img\Portrait_Placeholder.png" />
                 </div>
                 <h1>Ingresá a tu cuenta</h1>
                 <form class="col-12" onsubmit="checkUser(); return false;">
@@ -62,6 +62,8 @@ export const Login = () =>{
                         ENTRAR</button> */}
 
                     <Link className="btn  text-uppercase font-weight-bold btn-outline-info  btn-lg" to="/Comercializar">ENTRAR</Link>
+
+
                 </form>
 
             </div>
