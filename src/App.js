@@ -41,7 +41,7 @@ export const App=()=> {
   const visualizarInfo = (unaPropiedad)=>{
     setPropiedadSeleccionado(unaPropiedad)
     setModalOpen(true);
-    console.log("lo que se me cante", unaPropiedad);
+    console.log("Una propiedad", unaPropiedad);
     };
 
   const handleChangeTipo = (e) => {
