@@ -8,47 +8,55 @@ const Detalles=({propiedad})=>{
         
         <Grid
             container
-            style={{height:"40rem", width:"35rem" ,backgroundColor:"#ffffff",position:"absolute",left:"35%",top:"30%",borderRadius:10, padding:"1rem"}}
+            style={{height:"35rem", width:"30rem" ,backgroundColor:"#ffffff",position:"absolute",left:"35%",top:"30%",borderRadius:10, padding:"1rem"}}
     
 
         >
             <div class="modal-content">
-                <div class="modal-header">
-                    <img class="imagen-prod" src={propiedad.imagen} alt="imagen-casa" />
-                    <h3 class="modal-title" id="pop-up-informacion" >Casa Residencial #35206
-                    </h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <Grid
+                    container
+                    item
+                    justifyContent="between"
+                    alignItems="center"
+                    justifyContent="start"
+                    >
+                    <img  style={{display:"inline"}} src={propiedad.imagen}  width="120px" height="120px" alt="imagen-casa" />
+                    
+                    
+                    <div style={{marginLeft:'2rem'}}>
+                    <h3 class="modal-title" id="pop-up-informacion" > {propiedad?.tipo_prop} </h3>
+                    <h3 class="modal-title" id="pop-up-informacion" ># {propiedad?.cod_propiedad} </h3>
+                    </div>
+                   
+                </Grid>
+               
                 <div class="modal-body">
                     <p>Av. Italia 905</p>
                     <p>Piso: -</p>
-                    <p>Barrio: A.Mu.Doch</p>
-                    <p>Resistencia</p>
-                    <p>Chaco</p>
-                    <div class="d-flex justify-content-end" >
-                        <button class="btn btn-success " data-dismiss="modal">DISPONIBLE</button>
-                    </div>
+                    <p>Barrio: -</p>
+                    <p>Direccion: {propiedad?.direccion}</p>
+                    <p>Ubicacion: {propiedad?.ubicacion}</p>
+                    <p>Costo de Venta: ${propiedad?.precio}</p>
+                    <p>Tipo: {propiedad?.tipo}</p>
                 </div>
-                <div class="modal-body" >
-                    <h4>Informacion Locatario Actual</h4>
-                    <p>Nombre Cliente: Oscar</p>
-                    <p>Apellido Cliente: Fernandez -</p>
-                    <p>Tipo de Cliente: Propietario</p>
-                    <p>Fecha de Inicio: 01/10/2019</p>
-                    <p>Fecha de Finalizacion: --</p>
-                    <p>Costo de Venta: $4.450.000,00</p>
-                    <p>Tipo: VENTA</p>
-                </div>
+
+                {
+                    propiedad?.disponibilidad ? (
+
+                        <div >
+                            <button style={{backgroundColor:"#30BB3A88", borderColor:"#ffffff"}} class="btn btn-success " data-dismiss="modal">DISPONIBLE</button>
+                        </div>
+                    ):(
+                        <div >
+                            <button style={{backgroundColor:"#EE361D88", borderColor:"#ffffff"}} class="btn btn-success " data-dismiss="modal">NO DISPONIBLE</button>
+                        </div>
+                    )
+                }
             </div>
 
 
 
-            <Typography>
-                {propiedad?.cod_propiedad}
-            </Typography>
-
+           
             
 
         </Grid>

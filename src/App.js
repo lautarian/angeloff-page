@@ -1,4 +1,6 @@
 import "./App.css";
+
+
 import {
   Button,
   Container,
@@ -109,11 +111,31 @@ export const App=()=> {
 
     if (terminoPrecio!=0){
 
+        if (terminoPrecio==1){
         var Resultado=Resultado.filter((elemento)=>{
-            if((elemento.precio.toString().includes(terminoPrecio))){
+            if((elemento.precio > 0) && (elemento.precio <= 1000000)){
                 return elemento;
             }
-          });
+          })
+        }else if(terminoPrecio==2){
+            var Resultado=Resultado.filter((elemento)=>{
+                if((elemento.precio > 1000001) && (elemento.precio <= 2000000)){
+                    return elemento;
+                }
+              })
+        }else if(terminoPrecio==3){
+            var Resultado=Resultado.filter((elemento)=>{
+                if((elemento.precio > 2000001) && (elemento.precio <= 4000000)){
+                    return elemento;
+                }
+                })
+        }else {
+            var Resultado=Resultado.filter((elemento)=>{
+                if(elemento.precio > 4000000) {
+                    return elemento;
+                }
+                })
+        };
     }
 
     if (terminoEstado!=0){
@@ -262,7 +284,7 @@ export const App=()=> {
                
                <TextField 
                     size="small"
-                    label="Buscar por ID"
+                    label="Buscar por Codigo propiedad"
                     style={{width: "10 rem", borderRadius:5,backgroundColor: "#ffffff88"}}
                     variant="outlined"
                     onChange={(e) => handleChangeBusqueda(e.target.value)}

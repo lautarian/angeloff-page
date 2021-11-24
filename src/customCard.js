@@ -1,5 +1,8 @@
 import { Button, Grid, IconButton, Typography } from "@mui/material";
 import Visibility from "@material-ui/icons/Visibility";
+import { borderRight } from "@mui/system";
+import { borders } from '@mui/system';
+
 
 export default function CustomCard({ propiedad,visibilizar }) {
   return (
@@ -8,7 +11,7 @@ export default function CustomCard({ propiedad,visibilizar }) {
       direction="row"
       flexDirection="row"
       style={{
-        height: "5rem",
+        height: "6rem",
         borderRadius: 10,
         backgroundColor: "#ffffff",
         marginTop: "1rem",
@@ -16,16 +19,29 @@ export default function CustomCard({ propiedad,visibilizar }) {
     >
       <Grid
         container
+        direction="column"
         item
         alignItems="center"
         justifyContent="center"
         style={{ width: "20%" }}
+        
       >
         
-        <img class="img-fluid" src={propiedad.imagen} width="50px" height="50px"/>
+      
+        <img className="" width="60px" height="50px" src={propiedad.imagen} />
+        
+    
+        
+     
 
-        {" "}
-        <Typography>{propiedad.cod_propiedad}</Typography>
+          <Typography color="#000000" >{propiedad.tipo_prop}</Typography>
+
+          <Typography># {propiedad.cod_propiedad}</Typography>
+
+     
+
+        
+      
       </Grid>
 
 
