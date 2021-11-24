@@ -1,6 +1,5 @@
 import "./App.css";
 
-
 import {
   Button,
   Container,
@@ -17,6 +16,7 @@ import React , { useEffect, useState, Component } from "react";
 import CustomCard from "./customCard";
 import axios from "axios";
 import Detalles from "./modalDetalles";
+import { Link } from "react-router-dom";
 
 
 export const App=()=> {
@@ -232,9 +232,9 @@ export const App=()=> {
     <body>
         <nav className="navbar sticky-top navbar-light navbar-expand-lg"> 
                     
-                <a className="navbar-brand ml-3 mt-2 " href="">
+                <Link className="navbar-brand ml-3 mt-2 " to="/Comercializar">
                     <img  src={"./img/LOGO3.png"} width="200" alt="Logo Domus"  id="img-logo"/>
-                </a>
+                </Link>
                 <button className="navbar-toggler btn-menu ml-auto" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" 
                     aria-label="Toggle navigation">
@@ -242,10 +242,10 @@ export const App=()=> {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <div className="navbar-nav ml-auto align-items-center">
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Reportes.html">Generar Reportes</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Mov.historicos.html">Archivo de Propiedades</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="Consultar-cliente.html">Archivo de Clientes</a>
-                        <a className="nav-link text-dark ml-3 mr-3 font-weight-bold" href="index.html">Cerrar Sesion</a>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Reportes">Generar Reportes</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/App">Archivo de Propiedades</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="#">Archivo de Clientes</Link>
+                        <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/Home">Cerrar Sesion</Link>
     
     
                         
@@ -301,20 +301,20 @@ export const App=()=> {
                 size="small"
                 style={{ width: "15rem", marginTop: "2rem" }}
             >
-                <InputLabel style={{color: "black"}} id="demo-simple-select-label">Tipo</InputLabel>
+                <InputLabel style={{color: "black",fontFamily: 'DM Sans'}} id="demo-simple-select-label">Tipo</InputLabel>
                 <Select
-                style={{backgroundColor:"#ffffff88"}}
+                style={{backgroundColor:"#ffffff88", fontFamily: 'DM Sans'}}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Tipo"
                 value={tipoSeleccionado}
                 onChange={(e) => handleChangeTipo(e.target.value)}
                 >
-                <MenuItem value={0}>-TIPO DE PROPIEDAD-</MenuItem>
-                <MenuItem value={'Casa'}>Casa</MenuItem>
-                <MenuItem value={'Chalet'}>Chalet</MenuItem>
-                <MenuItem value={'Departamento'}>Departamento</MenuItem>
-                <MenuItem value={'Monoambiente'}>Monoambiente</MenuItem>
+                <MenuItem value={0} style={{fontFamily: 'DM Sans'}}>-TIPO DE PROPIEDAD-</MenuItem>
+                <MenuItem value={'Casa'} style={{fontFamily: 'DM Sans'}}>Casa</MenuItem>
+                <MenuItem value={'Chalet'} style={{fontFamily: 'DM Sans'}}>Chalet</MenuItem>
+                <MenuItem value={'Departamento'} style={{fontFamily: 'DM Sans'}}>Departamento</MenuItem>
+                <MenuItem value={'Monoambiente'} style={{fontFamily: 'DM Sans'}}>Monoambiente</MenuItem>
                 </Select>
             </FormControl>
 
@@ -325,22 +325,22 @@ export const App=()=> {
                 size="small"
                 style={{ width: "15rem", marginTop: "2rem" }}
             >
-                <InputLabel id="demo-simple-select-label" style={{color: "black"}}>Ubicacion</InputLabel>
+                <InputLabel id="demo-simple-select-label" style={{color: "black",fontFamily: 'DM Sans'}}>Ubicacion</InputLabel>
                 <Select
-                style={{backgroundColor:"#ffffff88"}}
+                style={{backgroundColor:"#ffffff88", fontFamily: 'DM Sans'}}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Ubicacion"
                 value={ubicacionSeleccionada}
                 onChange={(e) => handleChangeUbicacion(e.target.value)}
                 >
-                <MenuItem value={0}>-UBICACION-</MenuItem>
-                <MenuItem value={'Chaco'}>Chaco</MenuItem>
-                <MenuItem value={'Corrientes'}>Corrientes</MenuItem>
-                <MenuItem value={'Mendoza'}>Mendoza</MenuItem>
-                <MenuItem value={'San Luis'}>San Luis</MenuItem>
-                <MenuItem value={'Misiones'}>Misiones</MenuItem>
-                <MenuItem value={'Formosa'}>Formosa</MenuItem>
+                <MenuItem value={0} style={{fontFamily: 'DM Sans'}}>-UBICACION-</MenuItem>
+                <MenuItem value={'Chaco'} style={{fontFamily: 'DM Sans'}}>Chaco</MenuItem>
+                <MenuItem value={'Corrientes'} style={{fontFamily: 'DM Sans'}}>Corrientes</MenuItem>
+                <MenuItem value={'Mendoza'} style={{fontFamily: 'DM Sans'}}>Mendoza</MenuItem>
+                <MenuItem value={'San Luis'} style={{fontFamily: 'DM Sans'}}>San Luis</MenuItem>
+                <MenuItem value={'Misiones'} style={{fontFamily: 'DM Sans'}}>Misiones</MenuItem>
+                <MenuItem value={'Formosa'} style={{fontFamily: 'DM Sans'}}>Formosa</MenuItem>
 
 
                 </Select>
@@ -350,20 +350,20 @@ export const App=()=> {
                 size="small"
                 style={{ width: "15rem", marginTop: "2rem" }}
             >
-                <InputLabel style={{color: "black"}} id="demo-simple-select-label">Precio</InputLabel>
+                <InputLabel style={{color: "black",fontFamily: 'DM Sans'}} id="demo-simple-select-label">Precio</InputLabel>
                 <Select
-                style={{backgroundColor:"#ffffff88"}}
+                style={{backgroundColor:"#ffffff88", fontFamily: 'DM Sans'}}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Precio"
                 value={precioSeleccionado}
                 onChange={(e) => handleChangePrecio(e.target.value)}
                 >
-                <MenuItem value={0}>-PRECIO-</MenuItem>
-                <MenuItem value={1}>0 - 1.000.000 ARS </MenuItem>
-                <MenuItem value={2}>1.000.001 - 2.000.000 ARS</MenuItem>
-                <MenuItem value={3}>2.000.001 - 4.000.000 ARS</MenuItem>
-                <MenuItem value={4}>4.000.001 - 9.000.000 ARS</MenuItem>
+                <MenuItem value={0} style={{fontFamily: 'DM Sans'}}>-PRECIO-</MenuItem>
+                <MenuItem value={1} style={{fontFamily: 'DM Sans'}}>0 - 1.000.000 ARS </MenuItem>
+                <MenuItem value={2} style={{fontFamily: 'DM Sans'}}>1.000.001 - 2.000.000 ARS</MenuItem>
+                <MenuItem value={3} style={{fontFamily: 'DM Sans'}}>2.000.001 - 4.000.000 ARS</MenuItem>
+                <MenuItem value={4} style={{fontFamily: 'DM Sans'}}>4.000.001 - 9.000.000 ARS</MenuItem>
                 </Select>
             </FormControl>
 
@@ -371,18 +371,18 @@ export const App=()=> {
                 size="small"
                 style={{ width: "15rem", marginTop: "2rem" }}
             >
-                <InputLabel style={{color: "black"}} id="demo-simple-select-label">Estado</InputLabel>
+                <InputLabel style={{color: "black", fontFamily: 'DM Sans'}} id="demo-simple-select-label">Estado</InputLabel>
                 <Select
-                style={{backgroundColor:"#ffffff88"}}
+                style={{backgroundColor:"#ffffff88", fontFamily: 'DM Sans'}}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Estado"
                 value={estadoSeleccionado}
                 onChange={(e) => handleChangeEstado(e.target.value)}
                 >
-                <MenuItem value={0}>-ESTADO-</MenuItem>
-                <MenuItem value={'Alquiler'}>Alquiler</MenuItem>
-                <MenuItem value={'Venta'}>Venta</MenuItem>
+                <MenuItem value={0} style={{fontFamily: 'DM Sans'}}>-ESTADO-</MenuItem>
+                <MenuItem value={'Alquiler'} style={{fontFamily: 'DM Sans'}}>Alquiler</MenuItem>
+                <MenuItem value={'Venta'} style={{fontFamily: 'DM Sans'}}>Venta</MenuItem>
                 </Select>
             </FormControl>
             </Grid>

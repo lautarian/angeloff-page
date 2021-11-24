@@ -28,10 +28,10 @@ export const Home = () =>{
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <div className="navbar-nav ml-auto align-items-center">
-                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/PropiedadesCatalogo">Propiedades</Link>
-                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/ReservarCita">Ofrece tu propiedad</Link>
-                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/ReservarCita">Contactanos</Link>
-                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/conocenos">Nosotros</Link>
+                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/#">Propiedades</Link>
+                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/#">Ofrece tu propiedad</Link>
+                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/#">Contactanos</Link>
+                            <Link className="nav-link text-dark ml-3 mr-3 font-weight-bold" to="/#">Nosotros</Link>
                             <Link className="btn  text-uppercase font-weight-bold btn-outline-info  btn-lg" to="/Login">soy empleado</Link>
                             
                         </div>

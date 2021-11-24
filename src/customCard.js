@@ -23,7 +23,7 @@ export default function CustomCard({ propiedad,visibilizar }) {
         item
         alignItems="center"
         justifyContent="center"
-        style={{ width: "20%" }}
+        style={{ width: "20%"}}
         
       >
         
@@ -34,9 +34,9 @@ export default function CustomCard({ propiedad,visibilizar }) {
         
      
 
-          <Typography color="#000000" >{propiedad.tipo_prop}</Typography>
+          <Typography  style={{fontFamily: 'DM Sans'}} color="#000000" >{propiedad.tipo_prop}</Typography>
 
-          <Typography># {propiedad.cod_propiedad}</Typography>
+          <Typography  style={{fontFamily: 'DM Sans'}}># {propiedad.cod_propiedad}</Typography>
 
      
 
@@ -54,40 +54,37 @@ export default function CustomCard({ propiedad,visibilizar }) {
         justifyContent="center"
         style={{ width: "20%" }}
       >
-        <Typography>{propiedad.ubicacion}</Typography>
+        <Typography  style={{fontFamily: 'DM Sans'}}>{propiedad.ubicacion}</Typography>
       </Grid>
       <Grid
         container
         item
         alignItems="center"
         justifyContent="center"
-        style={{ width: "20%" }}
+        style={{ width: "20%"}}
       >
-        <Typography>$ {propiedad.precio}</Typography>
+        <Typography  style={{fontFamily: 'DM Sans'}}>$ {propiedad.precio}</Typography>
       </Grid>
       <Grid
         container
         item
         alignItems="center"
         justifyContent="center"
-        style={{ width: "20%" }}
+        style={{ width: "20%"}}
       >
-        <Typography>{propiedad.tipo}</Typography>
+        <Typography style={{fontFamily: 'DM Sans'}}>{propiedad.tipo}</Typography>
       </Grid>
       <Grid
         container
         item
         alignItems="center"
         justifyContent="center"
-        style={{ width: "20%" }}
+        style={{ width: "20%"}}
       >
           <IconButton onClick={()=> visibilizar(propiedad) }> <Visibility style={{color:"#70C6DB"}} /> </IconButton>
       </Grid>
 
-      {/* <Grid container item>
-        {" "}
-        <Button>Ver</Button> <Button>Info</Button>
-      </Grid> */}
+      
     </Grid>
   );
 }

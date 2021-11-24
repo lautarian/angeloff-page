@@ -311,7 +311,8 @@ footer{
 
 
 hr.solid {
-  margin-right: 10%;
+  margin-right: 67%;
+  margin-left:0%;
   height: 0.6rem;
   background: linear-gradient(to right, #2392ae, #afccd3);
 }
